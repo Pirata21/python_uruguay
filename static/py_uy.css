@@ -42,25 +42,26 @@ svg {
  
 .clock-face {
   stroke: #333;
-  fill: white;
+  fill: black;
+  
 }
  
 .minor {
-  stroke: #999;
+  stroke: #FED442;
   stroke-width: 0.5;
 }
  
 .major {
-  stroke: #333;
+  stroke: #3772A2;
   stroke-width: 1;
 }
  
 .hour {
-  stroke: #333;
+  stroke: #fff;
 }
  
 .minute {
-  stroke: #666;
+  stroke: #999;
 }
  
 .second, .second-counterweight {

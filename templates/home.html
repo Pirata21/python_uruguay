@@ -16,9 +16,8 @@
 <body ng-cloak ng-controller="ClockController">
  <div class="container">
   <div class="header">
-    <img src="http://blog.traeblain.com/static/images/2011/python-logo.png" alt="">
+    <img src="/static/python-logo.png" alt="">
   </div>
-
 
   <div class="row jumbotron">
     <div class="col-lg-6 left-cont">
@@ -41,13 +40,14 @@
 <div class="col-lg-6">
   <div class="square">
     <svg viewBox="0 0 100 100">
+     
       <g transform="translate(50,50)">
         <circle class="clock-face" r="48" />
         
         <line ng-repeat="x in minors" class="minor"
-        y1="42" y2="45" transform="rotate({[{360 * x / minors.length}]})" />
+        y1="42" y2="44" transform="rotate({[{360 * x / minors.length}]})" />
         <line ng-repeat="x in majors" class="major"
-        y1="35" y2="46" transform="rotate({[{360 * x / majors.length}]})" />
+        y1="35" y2="44" transform="rotate({[{360 * x / majors.length}]})" />
         <line class="hour" y1="2" y2="-20"
         transform="rotate({[{30 * date.getHours() + date.getMinutes() / 2}]})" />
         <line class="minute" y1="4" y2="-30"
