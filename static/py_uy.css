@@ -1,0 +1,132 @@
+.left, .right {
+  float: left;
+  width: 50%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+ 
+
+ 
+#example p {
+  margin: 1em 0 0 0;
+}
+ 
+.time {
+  font-family: 'Voltaire';
+  font-size: 4em;
+  margin: 0;
+}
+ 
+.left-cont h4 {
+	font-family: 'Voltaire';
+	font-size: 1.9em;
+}
+
+.left-cont {
+	text-align: center;
+}
+ 
+.square {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+}
+ 
+svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+ 
+.clock-face {
+  stroke: #333;
+  fill: white;
+}
+ 
+.minor {
+  stroke: #999;
+  stroke-width: 0.5;
+}
+ 
+.major {
+  stroke: #333;
+  stroke-width: 1;
+}
+ 
+.hour {
+  stroke: #333;
+}
+ 
+.minute {
+  stroke: #666;
+}
+ 
+.second, .second-counterweight {
+  stroke: rgb(180,0,0);
+}
+ 
+.second-counterweight {
+  stroke-width: 3;
+}
+
+body {
+    padding-bottom: 20px;
+    padding-top: 20px;
+    background: #000;
+    cxbackground: url('http://images6.fanpop.com/image/photos/35100000/Python-programming-35141649-1680-1050.jpg') center top;
+}
+.header, .marketing, .footer {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.header {
+    border-bottom: 1px solid #E5E5E5;
+    text-align: center;
+}
+.header h3 {
+    line-height: 40px;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-bottom: 19px;
+}
+.footer {
+    border-top: 1px solid #E5E5E5;
+    color: lime;
+    padding-top: 19px;
+}
+@media (min-width: 768px) {
+.container {
+    max-width: 730px;
+}
+}
+.container-narrow > hr {
+    margin: 30px 0;
+}
+.jumbotron {
+    border-bottom: 1px solid #E5E5E5;
+   
+}
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+}
+.marketing {
+    margin: 40px 0;
+}
+.marketing p + h4 {
+    margin-top: 28px;
+}
+@media screen and (min-width: 768px) {
+.header, .marketing, .footer {
+    padding-left: 0;
+    padding-right: 0;
+}
+.header {
+    margin-bottom: 30px;
+}
+.jumbotron {
+    border-bottom: 0 none;
+
+}

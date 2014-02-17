@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html  ng-app="clock">
+<head>
+	<title>Python Uruguay</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/py_uy.css">
+  <link href='http://fonts.googleapis.com/css?family=Voltaire' rel='stylesheet' type='text/css'>
+  
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
+  <script src="/static/py_uy.js"></script>
+</head>
+
+<body ng-cloak ng-controller="ClockController">
+ <div class="container">
+  <div class="header">
+    <img src="http://blog.traeblain.com/static/images/2011/python-logo.png" alt="">
+  </div>
+
+
+  <div class="row jumbotron">
+    <div class="col-lg-6 left-cont">
+     <h4>
+      Ya estamos a {[{days[date.getDay()]}]} {[{date.getDate()}]} de {[{months[date.getMonth()]}]} ... ya son las:
+    </h4>
+    
+    <span class="time">
+      <span class="hours">
+        {[{date.getHours() | pad}]}
+      </span>:<span class="minutes">
+      {[{date.getMinutes() | pad}]}
+    </span>:<span class="seconds">
+    {[{date.getSeconds() | pad}]}
+  </span>
+</span>
+<h4>...no es hora de empezar con Python?</h4>   
+</div>
+
+<div class="col-lg-6">
+  <div class="square">
+    <svg viewBox="0 0 100 100">
+      <g transform="translate(50,50)">
+        <circle class="clock-face" r="48" />
+        
+        <line ng-repeat="x in minors" class="minor"
+        y1="42" y2="45" transform="rotate({[{360 * x / minors.length}]})" />
+        <line ng-repeat="x in majors" class="major"
+        y1="35" y2="46" transform="rotate({[{360 * x / majors.length}]})" />
+        <line class="hour" y1="2" y2="-20"
+        transform="rotate({[{30 * date.getHours() + date.getMinutes() / 2}]})" />
+        <line class="minute" y1="4" y2="-30"
+        transform="rotate({[{6 * date.getMinutes() + date.getSeconds() / 10}]})" />
+        <g transform="rotate({[{6 * date.getSeconds()}]})">
+          <line class="second" y1="10" y2="-38" />
+          <line class="second-counterweight" y1="10" y2="2" />
+        </g>
+      </g>
+    </svg>
+  </div>
+</div>
+</div>
+
+
+<div class="footer">
+ <blockquote>
+  <p>"But we are hackers and hackers have black terminals with green font colors!"</p>
+  <footer>John Nunemaker</footer>
+</blockquote>
+</div>
+
+</div> <!-- /container -->
+
+<div class="left">
+  
+ 
+</div>
+
+<div class="right">
+  
+</div>
+</body>
+<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+</html>
