@@ -41,8 +41,9 @@ svg {
 }
  
 .clock-face {
-  stroke: #333;
+  stroke: #3772A2;
   fill: black;
+  stroke-width: 3;
   
 }
  
